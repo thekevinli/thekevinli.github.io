@@ -9,6 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="index.js"></script>
     
   </head>
 
@@ -56,6 +58,58 @@
           </tbody></table>
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
+            <tr>
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <div class="one">
+                  <div class="two" id='smerf_image'>
+                    <div class="teaser-video-container">
+                      <div class="teaser-video-wrapper" id="teaser-video1-wrapper">
+                        <video id="teaser-video1" width="200%" preload="auto" autoplay loop muted>
+                          <source src="images/textured_gaussians/blender_lego_3dgs.mp4" type="video/mp4">
+                          Your browser does not support the video tag.
+                        </video>
+                      </div>
+                      <div class="teaser-video-wrapper" id="teaser-video2-wrapper">
+                        <video id="teaser-video2" width="200%" preload="auto" autoplay loop muted>
+                          <source src="images/textured_gaussians/blender_lego_ours.mp4" type="video/mp4">
+                          Your browser does not support the video tag.
+                        </video>
+                      </div>
+                      <div class="teaser-slider" id="teaser-slider"></div>
+                      <!-- Labels -->
+                      <div class="teaser-label teaser-label-top" id="teaser-label-top">Ours</div>
+                      <div class="teaser-label teaser-label-bottom" id="teaser-label-bottom">3DGS</div>
+                    </div>
+                  </div>
+                </div>
+        
+              </td>
+              <td style="padding:20px;width:75%;vertical-align:middle">
+                <a href="https://textured-gaussians.github.io/">
+                  <span class="papertitle">Textured Gaussians for Enhanced 3D Scene Appearance Modeling</span>
+                </a>
+                <br>
+                <strong>Brian Chao</strong>,
+                <a href="">Hung-Yu Tseng</a>,
+                <a href="">Lorenzo Porzi</a>,
+                <a href="">Chen Gao</a>,
+                <a href="">Tuotuo Li</a>,
+                <a href="">Qinbo Li</a>,
+                <a href="">Ayush Saraf</a>,
+                <a href="">Jia-Bin Huang</a>,
+                <a href="">Johannes Kopf</a>,
+                <a href="">Gordon Wetzstein</a>,
+                <a href="">Changil Kim</a>
+                <br>
+                <em>arXiv preprint</em>, 2024
+                <br>
+                <p></p>
+                <p>
+                  Augmenting Gaussians with RGBA texture maps greatly improves novel-view synthesis quality in 
+                  3D Gaussian Splatting.
+                </p>
+              </td>
+            </tr>
 
             <tr>
               <td style="padding:20px;width:25%;vertical-align:middle">
@@ -71,7 +125,7 @@
               </td>
               <td style="padding:20px;width:75%;vertical-align:middle">
                 <a href="https://bchao1.github.io/holo_dfm/">
-                  <span class="papertitle">Large Étendue 3D Holographic Display with Content-adpative Dynamic Fourier Modulation</span>
+                  <span class="papertitle">Large Étendue 3D Holographic Display with Content-adaptive Dynamic Fourier Modulation</span>
                 </a>
                 <br>
                 <strong>Brian Chao</strong>,
@@ -240,7 +294,7 @@
       </td>
       <td style="padding:20px;width:75%;vertical-align:middle">
         <a href="https://opg.optica.org/ol/fulltext.cfm?uri=ol-48-15-4041&id=535470">
-          <span class="papertitle">High Brighness Holographic Projection</span>
+          <span class="papertitle">High Brightness Holographic Projection</span>
         </a>
         <br>
         <strong>Brian Chao</strong>,
