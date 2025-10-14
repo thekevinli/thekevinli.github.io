@@ -3,11 +3,12 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-    <title>Brian Chao</title>
-
-    <meta name="author" content="Brian Chao">
+    <title>Kevin Li</title>
+    
+    <meta name="author" content="Kevin Li">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="./images/prof_pic.png">
+    <!-- <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon"> -->
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="index.js"></script>
@@ -22,41 +23,34 @@
             <tr style="padding:0px">
               <td style="padding:2.5%;width:63%;vertical-align:middle">
                 <p class="name" style="text-align: center;">
-                  Brian Chao
+                  Kevin (Yu-Teng) Li
                 </p>
                 <p>
-                  I'm a 4th year PhD candidate at Stanford University working in the <a href="https://www.computationalimaging.org/">Stanford Computational Imaging Lab</a>, advised by Prof. <a href="https://web.stanford.edu/~gordonwz/">Gordon Wetzstein</a>.
-                  I'm grateful to be supported by the <a href="https://www.nsfgrfp.org/">NSF GRFP</a> and the <a href="https://vpge.stanford.edu/fellowships-funding/sgf">Stanford Graduate Fellowship</a>.
+                  I am an Applied Research Scientist at Adobe Firefly, working on foundation model training and multimodal research. Most recently I led the multimodal pretraining of Firefly Image 5, which includes textual editing, single-image reference generation, layer generation, and text-to-image workflows. 
                 </p>
                 <p>
-                  My research focuses on developing physics-grounded neural rendering algorithms that unify computer graphics, physics, and ML, to enable new capabilities in 
-                  <a href="https://bchao1.github.io/gaussian-wave-splatting/">next-generation AR/VR displays</a>, 
-                  <a href="https://textured-gaussians.github.io/">3D scene reconstruction</a>, and virtual world generation. Currently, I am expanding this expertise into generative world modeling, specifically in dynamic and consistent world generation.
-
+                  I previously graduated from University of California, Berkeley with a B.S. in Electrical Engineering and Computer Sciences, where I did my research in <a href="https://arxiv.org/abs/2306.11180">Active Learning in Segmentation</a> under the supervision Trevor Darrell.
                 </p>
-                <p>
-                  I've interned at Meta Reality Labs, where I worked on neural rendering for 3D reconstruction and next-generation computational displays.
-                  I've also served as a reviewer for SIGGRAPH, SIGGRAPH Asia, NeurIPS, ISMAR, TIP, TCI, ICIP, and ICASSP. 
-                </p>
+                <p><strong>Disclaimer</strong>: This website currently is still under construction! 🚧</p>
                 <p style="text-align:center">
-                  <a href="mailto:brianchc@stanford.edu">Email</a> &nbsp;/&nbsp;
+                  <a href="mailto:yutengli@berkeley.edu">Email</a> &nbsp;/&nbsp;
                   <a href="data/resume.pdf">CV</a> &nbsp;/&nbsp;
-                  <a href="https://scholar.google.com/citations?user=ALOWoaAAAAAJ&hl=en">Google Scholar</a> &nbsp;/&nbsp;
-                  <a href="https://twitter.com/BrianCChao">Twitter</a> &nbsp;/&nbsp;
-                  <a href="https://www.linkedin.com/in/brian-chao-85425415a/">LinkedIn</a> &nbsp;/&nbsp;
-                  <a href="https://github.com/bchao1">Github</a>
+                  <!-- <a href="">Google Scholar</a> &nbsp;/&nbsp; -->
+                  <a href="https://x.com/curiouskid423">Twitter</a> &nbsp;/&nbsp;
+                  <a href="https://www.linkedin.com/in/yutengli/">LinkedIn</a> &nbsp;/&nbsp;
+                  <a href="https://github.com/thekevinli">Github</a>
                 </p>
               </td>
               <td style="padding:2.5%;width:40%;max-width:40%">
-                <a href="images/prof_pic.png"><img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="images/prof_pic.png" class="hoverZoomLink"></a>
+                <a href="images/prof_pic.png"><img style="width:100%;max-width:100%;object-fit: cover; border-radius: 3%;" alt="profile photo" src="images/prof_pic.png" class="hoverZoomLink"></a>
               </td>
             </tr>
           </tbody></table>
 
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
               <tr>
-              <td style="padding:20px;width:100%;vertical-align:middle">
-                <h2>Research</h2>
+              <td style="padding:20px 0;width:100%;vertical-align:middle">
+                <h2>Research & Industry Projects</h2>
               </td>
             </tr>
           </tbody></table>
@@ -64,384 +58,138 @@
             
             <tr style="background-color: #ffffd0;">
               <td style="padding:20px;width:25%;vertical-align:middle">
-                <div class="one" style="display: flex; justify-content: center; align-items: center;">
-                  <div class="two" id='smerf_image' style="width: 100%; display: flex; justify-content: center; align-items: center;">
-                    <video width=100% muted autoplay loop style="max-width: 100%; height: auto; display: block;">
-                      <source src="images/gws-rp.mp4" type="video/mp4">
-                      Your browser does not support the video tag.
-                    </video>
-                  </div>
-                  <img src="" width=100% style="display: none;">
+                <div class="one; display: block; margin: auto">
+                  <img src="images/unifusion_arch.png" width=100%>
                 </div>
               </td>
               <td style="padding:20px;width:75%;vertical-align:middle">
-                <a href="https://bchao1.github.io/random-phase-gaussian-wave-splatting/">
-                  <span class="papertitle">Random-phase Gaussian Wave Splatting for Computer-generated Holography</span>
+                <a href="https://thekevinli.github.io/unifusion/">
+                  <span class="papertitle">UniFusion: Vision-Language Model as Unified Encoder for Image Generation</span>
                 </a>
                 <br>
-                <strong>Brian Chao*</strong>,
-                <a href="">Jackie Yang*</a>,
-                <a href="">Suyeon Choi</a>,
-                <a href="">Manu Gopakumar</a>,
-                <a href="">Ryota Koiso</a>,
-                <a href="">Gordon Wetzstein</a>
+                <strong>Yu-Teng Li*</strong>,
+                <a href="">Manuel Brack*</a>,
+                <a href="">Sudeep Katakol</a>,
+                <a href="">Hareesh Ravi</a>,
+                <a href="">Ajinkya Kale</a>
                 <br>
-                <em>arXiv</em>, 2025
-                <br>
+                <em>ArXiv</em>, 2025
                 <p></p>
                 <p>
-                  A fundamentally new alpha blending algorithm for Gaussian splats generates <strong><i>random-phase, full-bandwidth</i></strong> light field holograms, 
-                  enabling natural defocus blur, physically-accurate <i>parallax</i>, and <i>occlusion</i>.
+                  The first architecture that uses only VLM as input-condition encoder without auxiliary signals from VAE or CLIP to do editing. The unified encoder framework enables emergent capabilities such as zero-shot multi-ref generation when trained on single-ref pairs.
+                </p>
+              </td>
+            </tr>
+
+            <tr style="background-color: #ffffd0;">
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <div class="one; display: block; margin: auto">
+                  <img src="images/firefly_image_5.png" width=100%>
+                </div>
+              </td>
+              <td style="padding:20px;width:75%;vertical-align:middle">
+                <a href="https://blog.adobe.com/en/publish/2025/04/24/adobe-firefly-next-evolution-creative-ai-is-here">
+                  <span class="papertitle">Firefly Image 5</span>
+                </a>
+                <br>
+                <span style="padding: 3px 0; display: block;"><strong>Multimodal pretraining</strong> (textual editing, single-reference generation, layer generation)</span>
+                <p></p>
+                <p>
+                  I led multimodal pretraining of Firefly Image 5 model for workflows including textual editing, single-image reference generation, layer generation and text-to-image. Throughout the development, I handle ~1000 GPU scale of distributed training on a daily basis.
                 </p>
               </td>
             </tr>
             
-            <tr style="background-color: #ffffd0;">
+            <tr>
               <td style="padding:20px;width:25%;vertical-align:middle">
-                <div class="one" style="display: flex; justify-content: center; align-items: center;">
-                  <div class="two" id='smerf_image' style="width: 100%; display: flex; justify-content: center; align-items: center;">
-                    <video width=100% muted autoplay loop style="max-width: 100%; height: auto; display: block;">
-                      <source src="images/siggraph_2025.mp4" type="video/mp4">
-                      Your browser does not support the video tag.
-                    </video>
-                  </div>
-                  <img src="" width=100% style="display: none;">
+                <div class="one; display: block; margin: auto">
+                  <img src="images/firefly_image_4.jpg" width=100%>
                 </div>
               </td>
               <td style="padding:20px;width:75%;vertical-align:middle">
-                <a href="https://bchao1.github.io/gaussian-wave-splatting/">
-                  <span class="papertitle">Gaussian Wave Splatting for Computer-generated Holography</span>
+                <a href="https://blog.adobe.com/en/publish/2025/04/24/adobe-firefly-next-evolution-creative-ai-is-here">
+                  <span class="papertitle">Firefly Image 4</span>
                 </a>
-                <br>
-                <a href="">Suyeon Choi*</a>,
-                <strong>Brian Chao*</strong>,
-                <a href="">Jackie Yang</a>,
-                <a href="">Manu Gopakumar</a>,
-                <a href="">Gordon Wetzstein</a>
-                <br>
-                <em>SIGGRAPH</em>, 2025
-                <br>
-                <em>CVPR <a href="https://neural-bcc.github.io/">Neural Fields Beyond Conventional Cameras</a> & <a href="https://kristinamonakhova.com/ccd2025/">CCD</a> Workshop</em>, 2025
-                <br>
+                <span style="padding: 3px 0; display: block;"><strong>Foundation model pretraining & SFT</strong></span>
                 <p></p>
                 <p>
-                  When state-of-the-art neural rendering meets next-generation holographic displays: converting 
-                  optimized Gaussian splats to holograms that support natural focus cues.
+                  I am part of the pretraining team and in charge of post-training (SFT). Lorem ipsum dolor sit amet, dicta legere omittam an eum, ius atqui nusquam in. In tibique detraxit vim, eos diam autem consequuntur ei. Sit probo libris at, cum nisl facete civibus ei, novum paulo nam ex. In mei error aperiam intellegam.
                 </p>
               </td>
             </tr>
-
-          
-            <tr style="background-color: #ffffd0;">
+            <tr>
               <td style="padding:20px;width:25%;vertical-align:middle">
-                <div class="one">
-                  <div class="two" id='smerf_image'>
-                    <div class="teaser-video-container">
-                      <div class="teaser-video-wrapper" id="teaser-video1-wrapper">
-                        <video id="teaser-video1" width="200%" preload="auto" autoplay loop muted>
-                          <source src="images/textured_gaussians/blender_lego_3dgs.mp4" type="video/mp4">
-                          Your browser does not support the video tag.
-                        </video>
-                      </div>
-                      <div class="teaser-video-wrapper" id="teaser-video2-wrapper">
-                        <video id="teaser-video2" width="200%" preload="auto" autoplay loop muted>
-                          <source src="images/textured_gaussians/blender_lego_ours.mp4" type="video/mp4">
-                          Your browser does not support the video tag.
-                        </video>
-                      </div>
-                      <div class="teaser-slider" id="teaser-slider"></div>
-                      <!-- Labels -->
-                      <div class="teaser-label teaser-label-top" id="teaser-label-top">Ours</div>
-                      <div class="teaser-label teaser-label-bottom" id="teaser-label-bottom">3DGS</div>
-                    </div>
-                  </div>
+                <div class="one; display: block; margin: auto">
+                  <img src="images/firefly_image_3.png" width=100%>
                 </div>
-        
               </td>
               <td style="padding:20px;width:75%;vertical-align:middle">
-                <a href="https://textured-gaussians.github.io/">
-                  <span class="papertitle">Textured Gaussians for Enhanced 3D Scene Appearance Modeling</span>
+                <a href="https://helpx.adobe.com/firefly/web/work-with-enterprise-features/train-custom-models/custom-models-overview.html">
+                  <span class="papertitle">Firefly Image 3 Custom Models</span>
                 </a>
-                <br>
-                <strong>Brian Chao</strong>,
-                <a href="">Hung-Yu Tseng</a>,
-                <a href="">Lorenzo Porzi</a>,
-                <a href="">Chen Gao</a>,
-                <a href="">Tuotuo Li</a>,
-                <a href="">Qinbo Li</a>,
-                <a href="">Ayush Saraf</a>,
-                <a href="">Jia-Bin Huang</a>,
-                <a href="">Johannes Kopf</a>,
-                <a href="">Gordon Wetzstein</a>,
-                <a href="">Changil Kim</a>
-                <br>
-                <em>CVPR</em>, 2025
                 <br>
                 <p></p>
                 <p>
-                  Augmenting Gaussians with RGBA texture maps greatly improves novel-view synthesis quality in 
-                  3D Gaussian Splatting.
+                  I led the personalization effort of Firefly Image 3 called Custom Models, which caters to enterprise customers. I developed the training recipe, model architecture, and integrated the finetuning pipeline into prodcution service. Custom Model is... Lorem ipsum dolor sit amet, dicta legere omittam an eum, ius atqui nusquam in. In tibique detraxit vim, eos diam autem consequuntur ei.
+                </p>
+              </td>
+            </tr>
+          
+          
+
+            <tr>
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <div class="one; display: block; margin: auto">
+                  <img src="images/halo.png" width=100%>
+                </div>
+              </td>
+              <td style="padding:20px;width:75%;vertical-align:middle">
+                <a href="https://arxiv.org/abs/2306.11180">
+                  <span class="papertitle">Hyperbolic Active Learning for Semantic Segmentation under Domain Shift</span>
+                </a>
+                <br>
+                <a href="">Luca Franco*</a>,
+                <a href="">Paolo Mandica*</a>,
+                <a href="">Konstantinos Kallidromitis</a>,
+                <a href="">Devin Guillory</a>,
+                <strong>Yu-Teng Li</strong>,
+                <a href="">Trevor Darrell</a>,
+                <a href="">Fabio Galasso</a>
+                <br>
+                <em>ICML</em>, 2024
+                <br>
+                <p></p>
+                <p>
+                  HALO introduces a hyperbolic neural network approach to pixel-based active learning (AL) for semantic segmentation, and is the first active AL method to surpass the performance of supervised domain adaptation with just 1% of labeled pixels.
                 </p>
               </td>
             </tr>
 
             <tr>
               <td style="padding:20px;width:25%;vertical-align:middle">
-                <div class="one">
-                  <img src="images/sigasia_2024.gif" width=100%>
-                </div>
-        
-              </td>
-              <td style="padding:20px;width:75%;vertical-align:middle">
-                <a href="https://bchao1.github.io/holo_dfm/">
-                  <span class="papertitle">Large Étendue 3D Holographic Display with Content-adaptive Dynamic Fourier Modulation</span>
-                </a>
-                <br>
-                <strong>Brian Chao</strong>,
-                <a href="">Manu Gopakumar</a>,
-                <a href="">Suyeon Choi</a>,
-                <a href="">Liang Shi</a>,
-                <a href="">Jonghyun Kim</a>,
-                <a href="">Gordon Wetzstein</a>
-                <br>
-                <em>SIGGRAPH Asia</em>, 2024
-                <br>
-                <p></p>
-                <p>
-                  The novel combination of a multisource laser array and a dynamic Fourier amplitude modulator significantly improves 
-                  holographic display étendue and light field hologram image quality. 
-                </p>
-              </td>
-            </tr>
-
-            <tr>
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <div class="one">
-                  <div class="two" id='smerf_image'>
-                    <video  width=100% muted autoplay loop>
-                      Your browser does not support the video tag.
-                    </video>
-                  </div>
-                  <img src="images/nature2024.png" width=100%>
-                </div>
-        
-              </td>
-              <td style="padding:20px;width:75%;vertical-align:middle">
-                <a href="https://www.nature.com/articles/s41586-024-07386-0">
-                  <span class="papertitle">Full-colour 3D Holographic Augmented-Reality Displays with Metasurface Waveguides</span>
-                </a>
-                <br>
-                <a href="">Manu Gopakumar*</a>,
-                <a href="">Gun-Yeal Lee*</a>,
-                <a href="">Suyeon Choi</a>,
-                <strong>Brian Chao</strong>,
-                <a href="">Yifan Peng</a>,
-                <a href="">Jonghyun Kim</a>,
-                <a href="">Gordon Wetzstein</a>
-                <br>
-                <em>Nature</em>, 2024
-                <br>
-                <p></p>
-                <p>
-                  A near-eye display design that pairs inverse-designed metasurface waveguides with AI-driven holographic displays 
-                  to enable full-colour 3D augmented reality from a compact glasses-like form factor.
-                </p>
-              </td>
-            </tr>
-        
-            <tr>
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <div class="one" style="display: flex; justify-content: center; align-items: center;">
-                  <div class="two" id='smerf_image' style="width: 100%; display: flex; justify-content: center; align-items: center;">
-                    <video width=100% muted autoplay loop style="max-width: 100%; height: auto; display: block;">
-                      <source src="images/siggraph_etech_2024_video.mp4" type="video/mp4">
-                      Your browser does not support the video tag.
-                    </video>
-                  </div>
-                  <img src="" width=100% style="display: none;">
+                <div class="one; display: block; margin: auto">
+                  <img src="images/lunar_lander.gif" width=100%>
                 </div>
               </td>
               <td style="padding:20px;width:75%;vertical-align:middle">
-                <a href="https://dl.acm.org/doi/abs/10.1145/3641517.3664386">
-                  <span class="papertitle">Holographic Parallax</span>
+                <a href="https://arxiv.org/pdf/2212.10712">
+                  <span class="papertitle">Neighboring state-based RL Exploration</span>
                 </a>
                 <br>
-                <a href="">Seong-Woo Nam</a>,
-                <a href="">Dongyeon Kim</a>,
-                <a href="">Suyeon Choi</a>,
-                <a href="">Juhyun Lee</a>,
-                <a href="">Siwoo Lee</a>,
-                <a href="">Manu Gopakumar</a>,
-                <strong>Brian Chao</strong>,
-                <a href="">Gordon Wetzstein</a>,
-                <a href="">Yoonchan Jeong</a>
+                <a href="">Jeffery Cheng*</a>,
+                <strong>Yu-Teng Li*</strong>,
+                <a href="">Justin Lin*</a>,
+                <a href="">Pedro Pachuca*</a>
                 <br>
-                <em>SIGGRAPH Emerging Technologies</em>, 2024
+                <em>ArXiv</em>, 2022
                 <br>
                 <p></p>
                 <p>
-                  The inclusion of parallax cues in CGH rendering plays a crucial role in enhancing perceptual realism,
-                  and we show this through a live demonstration of 4D light field holograms.
+                  <a href="https://github.com/thekevinli/rho_exploration">Code</a>. Lorem ipsum dolor sit amet, dicta legere omittam an eum, ius atqui nusquam in. In tibique detraxit vim, eos diam autem consequuntur ei. Sit probo libris at, cum nisl facete civibus ei, novum paulo nam ex. In mei error aperiam intellegam.
                 </p>
               </td>
             </tr>
-          
-            <tr>
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <div class="one">
-                  <div width="100%" height="100%">
-                    <img src="images/siggraph_etech_2023_video.gif" width="100%">
-                  </div>
-                </div>
-          
-                <script type="text/javascript">
-                  function etech_start() {
-                    document.getElementById('etech_image').style.opacity = "1";
-                  }
-          
-                  function etech_stop() {
-                    document.getElementById('etech_image').style.opacity = "0";
-                  }
-                  etech_stop()
-                </script>
-          
-              </td>
-              <td style="padding:20px;width:75%;vertical-align:middle">
-                <a href="https://dl.acm.org/doi/abs/10.1145/3588037.3595395">
-                  <span class="papertitle">Neural Holographic Displays for Virtual Reality</span>
-                </a>
-                <br>
-                <strong>Brian Chao*</strong>,
-                <a href="">Suyeon Choi*</a>,
-                <a href="">Manu Gopakumar*</a>,
-                <a href="">Gun-Yeal Lee</a>,
-                <a href="">Jonghyun Kim</a>,
-                <a href="">Gordon Wetzstein</a>
-                <br>
-                <em>SIGGRAPH Emerging Technologies</em>, 2023
-                <br>
-                <p></p>
-                <p>
-                  Live demonstration of state-of-the-art image quality, full-color, 3D, holographic 
-                  VR near-eye displays that supports natural accommodation.
-                </p>
-              </td>
-            </tr>
-
-    <tr>
-      <td style="padding:20px;width:25%;vertical-align:middle">
-        <div class="one" style="display: flex; justify-content: center; align-items: center;">
-          <div class="two" id='smerf_image' style="width: 100%; display: flex; justify-content: center; align-items: center;">
-            <video width=100% muted autoplay loop style="max-width: 100%; height: auto; display: block;">
-              <source src="images/OL2023.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div>
-          <img src="" width=100% style="display: none;">
-        </div>
-      </td>
-      <td style="padding:20px;width:75%;vertical-align:middle">
-        <a href="https://opg.optica.org/ol/fulltext.cfm?uri=ol-48-15-4041&id=535470">
-          <span class="papertitle">High Brightness Holographic Projection</span>
-        </a>
-        <br>
-        <strong>Brian Chao</strong>,
-        <a href="">Manu Gopakumar</a>,
-        <a href="">Suyeon Choi</a>,
-        <a href="">Gordon Wetzstein</a>
-        <br>
-        <em>Optics Letters</em>, 2023
-        <br>
-        <p></p>
-        <p>
-          A novel light-efficiency loss function, AI-driven 
-          CGH techniques, and camera-in-the-loop calibration greatly improves holographic projector 
-          brightness and image quality.
-        </p>
-      </td>
-    </tr>
-
-
-    <tr>
-      <td style="padding:20px;width:25%;vertical-align:middle">
-        <div class="one">
-          <img src="images/tip2021.gif" width=100%>
-        </div>
-
-      </td>
-      <td style="padding:20px;width:75%;vertical-align:middle">
-        <a href="https://ieeexplore.ieee.org/document/9987726">
-          <span class="papertitle">Time-Division Multiplexing Light Field Display With Learned Coded Aperture</span>
-        </a>
-        <br>
-        <strong>Brian Chao*</strong>,
-        <a href="">Chang-Le Liu*</a>,
-        <a href="">Homer H. Chen</a>
-        <br>
-        <em>IEEE Transactions on Image Processing</em>, 2022
-        <br>
-        <p></p>
-        <p>
-          Using coded apertures and a learning-based light field display optimization pipeline 
-          to reproduce correct defocus blurs for better accommodation cues.
-        </p>
-      </td>
-    </tr>
-
-    <tr>
-      <td style="padding:20px;width:25%;vertical-align:middle">
-        <div class="one">
-          <img src="images/icip2021-results.gif" width=100%>
-        </div>
-
-      </td>
-      <td style="padding:20px;width:75%;vertical-align:middle">
-        <a href="https://ieeexplore.ieee.org/document/9506423">
-          <span class="papertitle">Robust Light Field Synthesis From Stereo Images With Left-Right Geometric Consistency</span>
-        </a>
-        <br>
-        <strong>Brian Chao</strong>,
-        <a href="">Chang-Le Liu</a>,
-        <a href="">Homer H. Chen</a>
-        <br>
-        <em>IEEE International Conference on Image Processing (ICIP)</em>, 2021
-        <br>
-        <p></p>
-        <p>
-          Leveraging geoemtric consistency in stereo images
-          to synthesize high-quality light fields.
-        </p>
-      </td>
-    </tr>
-
-    <tr>
-      <td style="padding:20px;width:25%;vertical-align:middle">
-        <div class="one">
-          <img src="images/icassp2020-result.gif" width=100%>
-        </div>
-
-      </td>
-      <td style="padding:20px;width:75%;vertical-align:middle">
-        <a href="https://ieeexplore.ieee.org/document/9054191">
-          <span class="papertitle">Self-Supervised Deep Learning for Fisheye Image Rectification</span>
-        </a>
-        <br>
-        <strong>Brian Chao*</strong>,
-        <a href="">Pin-Lun Hsu*</a>,
-        <a href="">Hung-yi Lee</a>,
-        <a href="">Y.C. Frank Wang</a>
-        <br>
-        <em>IEEE Internation Conference on Acoustics, Speech, and Signal Processing (ICASSP)</em>, 2020
-        <br>
-        <p></p>
-        <p>
-          We propose an image-to-image translation algorithm based on generative adversarial networks
-          that rectifies fisheye images without the need of paired training data.
-        </p>
-      </td>
-    </tr>
-
-    <tr>
+    <!-- <tr>
       <td style="padding:20px;width:25%;vertical-align:middle">
         <div class="one">
           <img src="images/scTIE_pipeline.jpg" width=100%>
@@ -457,7 +205,7 @@
         <a href="">Tung-Yu Wu</a>,
         <a href="">Xi Chen</a>,
         <a href="">Sheng Wan</a>,
-        <strong>Brian Chao</strong>,
+        <strong>Kevin Li</strong>,
         <a href="">Jingxue Xin</a>,
         <a href="">Jean Y.H. Yang</a>,
         <a href="">Wing H. Wong</a>
@@ -471,74 +219,8 @@
           in single-cell temporal and multimodal data.
         </p>
       </td>
-    </tr>
-    
-</tbody></table>
-
-<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-  <tr>
-  <td style="padding:20px;width:100%;vertical-align:middle">
-    <h2>Industry Experiences</h2>
-  </td>
-</tr>
-</tbody></table>
-<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-
-  <tr>
-    <td style="padding:20px;width:25%;vertical-align:middle">
-      <div class="one" style="display:flex;align-items:center;height:100%">
-        <img src="images/meta_logo.svg" width="100%" alt="Meta Logo">
-      </div>
-    </td>
-    <td style="padding:20px;width:75%;vertical-align:middle">
-      <div style="display:flex;flex-direction:column;justify-content:center">
-        <span style="font-weight:bold">Research Scientist Intern</span>
-        <span>Meta Reality Labs, Display Systems Research (DSR)</span>
-        <span style="color:#666;font-style:italic;margin-top:3px">June 2025 - </span>
-        <p style="margin-top:10px">
-          Working with <a href="https://grace-kuo.com/">Grace Kuo</a> and <a href="https://scholar.google.co.kr/citations?user=s2uBMgkAAAAJ&hl=ko">Changwon Jang</a> on neural rendering and compact 3D representations for computational displays.
-        </p>
-      </div>
-    </td>
-  </tr>
-
-  <tr>
-    <td style="padding:20px;width:25%;vertical-align:middle">
-      <div class="one" style="display:flex;align-items:center;height:100%">
-        <img src="images/meta_logo.svg" width="100%" alt="Meta Logo">
-      </div>
-    </td>
-    <td style="padding:20px;width:75%;vertical-align:middle">
-      <div style="display:flex;flex-direction:column;justify-content:center">
-        <span style="font-weight:bold">Research Scientist Intern</span>
-        <span>Meta Reality Labs, the <a href="https://www.meta.com/experiences/meta-horizon-hyperscape-preview/7972066712871980/?srsltid=AfmBOorCKvChU8DSqLUN9tx2xpHgWKYeB7FuxwbbPCNR4iBgKavBrG1g">Hyperscape</a> team (formerly XR Hyperreal)</span>
-        <span style="color:#666;font-style:italic;margin-top:3px">June 2024 - January 2025</span>
-        <p style="margin-top:10px">
-          Worked on neural rendering for 3D reconstruction (<a href="https://textured-gaussians.github.io">Textured Gaussians</a>, CVPR 2025), 
-          with <a href="https://changilkim.com/">Changil Kim</a>, <a href="https://hytseng0509.github.io/">Hung-Yu Tseng</a>,
-          <a href="https://jbhuang0604.github.io/">Jia-Bin Huang</a>, and <a href="https://johanneskopf.de/">Johannes Kopf</a>.
-        </p>
-      </div>
-    </td>
-  </tr>
-
-
-</tbody></table>
-
-
-<!-- 
-<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-  <tr>
-  <td style="padding:20px;width:100%;vertical-align:middle">
-    <h2>Public Demonstrations</h2>
-  </td>
-</tr>
-</tbody></table>
-<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-
-
-</tbody></table>
--->
+    </tr> -->
+    </tbody></table>
 
           <!--
           <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
