@@ -26,11 +26,16 @@
                   Kevin (Yu-Teng) Li
                 </p>
                 <p>
-                  I am an Research Scientist at Adobe, working on foundation model training and <a href="https://thekevinli.github.io/unifusion/">multimodal research</a>. 
-                  Most recently I co-led the multimodal pretraining of <a href="https://x.com/curiouskid423/status/1983229813906420009">Firefly Image 5</a> released at Adobe MAX 2025 (Preview), which enables instruction editing, character-reference generation, layered generation and text-to-image at 2k resolution. 
+                  I am a Research Scientist at Adobe, working on visual foundation model training and <a href="https://thekevinli.github.io/unifusion/">multimodal research</a>. My current focus is on building better video generation models and data.
                 </p>
                 <p>
-                  Previously, I graduated from University of California, Berkeley with a B.S. in Electrical Engineering and Computer Sciences, where I did my research in <a href="https://arxiv.org/abs/2306.11180">Active Learning in Segmentation</a> under the supervision of <a href="https://darrellgroup.github.io">Trevor Darrell</a>.
+                  Recently I co-led the multimodal pretraining of <a href="https://x.com/curiouskid423/status/1983229813906420009">Firefly Image 5</a> released at Adobe MAX 2025 (Preview), which enables instruction editing, character-reference generation, layered generation and text-to-image at 2k resolution. 
+                </p>
+                <p>
+                  Previously, I graduated from University of California, Berkeley with a B.S. in Electrical Engineering and Computer Sciences, where I did my research in <a href="https://arxiv.org/abs/2306.11180">Active Learning</a> under the supervision of <a href="https://darrellgroup.github.io">Trevor Darrell</a>. 
+                </p>
+                <p>
+                  I have also served as a reviewer for CVPR, ECCV, NeurIPS and ICLR.
                 </p>
                 <!-- <p><strong>This website currently is still under construction! 🚧</strong></p> -->
                 <p style="text-align:center">
@@ -51,37 +56,11 @@
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
               <tr>
               <td style="padding:20px 0;width:100%;vertical-align:middle">
-                <h2>Research & Industry Projects</h2>
+                <h2>Industry Projects</h2>
               </td>
             </tr>
           </tbody></table>
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            
-            <tr style="background-color: #ffffd0;">
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <div class="one; display: block; margin: auto">
-                  <img src="images/unifusion_arch.png" width=100%>
-                </div>
-              </td>
-              <td style="padding:20px;width:75%;vertical-align:middle">
-                <a href="https://thekevinli.github.io/unifusion/">
-                  <span class="papertitle">UniFusion: Vision-Language Model as Unified Encoder for Image Generation and Editing</span>
-                </a>
-                <br>
-                <strong>Yu-Teng Li*</strong>,
-                <a href="https://x.com/MBrack_AIML">Manuel Brack*</a>,
-                <a href="https://sudeepkatakol.github.io/">Sudeep Katakol</a>,
-                <a href="https://hareesh-ravi.github.io/">Hareesh Ravi</a>,
-                <a href="https://x.com/ajinkyakale">Ajinkya Kale</a>
-                <br>
-                <em><b>ICLR</b> Workshop on Multimodal Intelligence</em>, 2026
-                <p></p>
-                <p>
-                  UniFusion challenges the premise that semantic embeddings are insufficient for pixel generation tasks, and is the first architecture that uses only VLM as unified semantic encoder without auxiliary signals from VAE or CLIP to do editing. The unified encoder framework enables competitive generation and editing performance that rivals Flux.1[dev] and Bagel, with emergent capabilities such as <strong>zero-shot multi-ref generation</strong> when trained on single-reference pairs.
-                </p>
-              </td>
-            </tr>
-
             <tr style="background-color: #ffffd0;">
               <td style="padding:20px;width:25%;vertical-align:middle">
                 <div class="one; display: block; margin: auto">
@@ -119,7 +98,7 @@
                 <span><em>April 2025</em></span>
                 <p></p>
                 <p>
-                  Being part of the foundation model training team of Image 4, I developed recipes for synthetic data handling and aesthetics fine-tuning (SFT), as well as sampling improvements. Firefly Image 4 is, as of Oct 2025, still one of the most advanced text-to-image models in the industry, <a href="./images/text_to_image_arena_screenshot_oct2025.png", target="_blank">leading competitors</a> such as Qwen-Image, Runway Gen-4 Image, Luma Photon...etc in "General & Photorealistic" category on <a href="https://artificialanalysis.ai/image/leaderboard/text-to-image?style=general-and-photorealistic">Text-to-Image Arena</a>.
+                  Core member of the foundation model training team. I developed recipes for synthetic data handling and aesthetics fine-tuning (SFT), as well as sampling improvements. Firefly Image 4 is, as of Oct 2025, one of the most advanced T2I models in the industry, <a href="./images/text_to_image_arena_screenshot_oct2025.png", target="_blank">ahead of competitors</a> such as Qwen-Image, Runway Gen-4 Image, Luma Photon...etc in "General & Photorealistic" category on <a href="https://artificialanalysis.ai/image/leaderboard/text-to-image?style=general-and-photorealistic">Text-to-Image Arena</a>.
                 </p>
               </td>
             </tr>
@@ -137,67 +116,154 @@
                 <span><em>August 2024</em></span>
                 <p></p>
                 <p>
-                  I led the personalization effort of Firefly Image 3 called Custom Models, which enables copyright content generations for Adobe's enterprise customers. I developed the training recipe (e.g. improved Dreambooth's stability with VLM-predicted superclass, improve optimizer memory efficiency) and integrated the finetuning pipeline into prodcution. 
+                  I led the personalization effort of Firefly Image 3, which enables copyright content generations for Adobe's enterprise customers. Developed the training recipe (e.g. improved optimizer memory efficiency and Dreambooth's stability with VLM-predicted superclass) and integrated the finetuning pipeline into prodcution. 
                 </p>
               </td>
             </tr>
-          
-          
+    </tbody></table>
 
-            <tr>
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <div class="one; display: block; margin: auto">
-                  <img src="images/halo.png" width=100%>
-                </div>
-              </td>
-              <td style="padding:20px;width:75%;vertical-align:middle">
-                <a href="https://arxiv.org/abs/2306.11180">
-                  <span class="papertitle">Hyperbolic Active Learning for Semantic Segmentation under Domain Shift</span>
-                </a>
-                <br>
-                <a href="">Luca Franco*</a>,
-                <a href="">Paolo Mandica*</a>,
-                <a href="">Konstantinos Kallidromitis</a>,
-                <a href="https://www.devinguillory.com">Devin Guillory</a>,
-                <strong>Yu-Teng Li</strong>,
-                <a href="https://darrellgroup.github.io">Trevor Darrell</a>,
-                <a href="">Fabio Galasso</a>
-                <br>
-                <em>ICML</em>, 2024
-                <br>
-                <p></p>
-                <p>
-                  HALO introduces a hyperbolic neural network approach to pixel-based active learning (AL) for semantic segmentation, and is the first AL method to surpass the performance of fully-supervised baseline on synthetic-to-real domain adaptation benchmarks such as GTAV → Cityscapes, with just 1% of labeled pixels.
-                </p>
-              </td>
-            </tr>
+    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        <tr>
+        <td style="padding:20px 0;width:100%;vertical-align:middle">
+          <h2>Research</h2>
+        </td>
+      </tr>
+    </tbody></table>
+    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+      <tr style="background-color: #ffffd0;">
+        <td style="padding:20px;width:25%;vertical-align:middle">
+          <div class="one; display: block; margin: auto">
+            <img src="images/unifusion_arch.png" width=100%>
+          </div>
+        </td>
+        <td style="padding:20px;width:75%;vertical-align:middle">
+          <a href="https://thekevinli.github.io/unifusion/">
+            <span class="papertitle">UniFusion: Vision-Language Model as Unified Encoder for Image Generation and Editing</span>
+          </a>
+          <br>
+          <strong>Yu-Teng Li</strong>,
+          <a href="https://x.com/MBrack_AIML">Manuel Brack</a>,
+          <a href="https://sudeepkatakol.github.io/">Sudeep Katakol</a>,
+          <a href="https://hareesh-ravi.github.io/">Hareesh Ravi</a>,
+          <a href="https://x.com/ajinkyakale">Ajinkya Kale</a>
+          <br>
+          <em><b>ICLR</b> Workshop on Multimodal Intelligence</em>, 2026
+          <p></p>
+          <p>
+            UniFusion challenges the premise that semantic embeddings are insufficient for pixel generation tasks, and is the first architecture that uses only VLM as unified semantic encoder without inputs from VAE or CLIP to do editing. The unified encoder framework enables competitive generation and editing that rivals Flux.1[dev] and Bagel, with emergent capabilities such as <strong>zero-shot multi-ref generation</strong> when trained on single-ref pairs.
+          </p>
+        </td>
+      </tr>
 
-            <tr>
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <div class="one; display: block; margin: auto">
-                  <img src="images/lunar_lander.gif" width=100%>
-                </div>
-              </td>
-              <td style="padding:20px;width:75%;vertical-align:middle">
-                <a href="https://arxiv.org/abs/2212.10712">
-                  <span class="papertitle">Neighboring State-based Exploration for Reinforcement Learning </span>
-                </a>
-                <br>
-                <strong>Yu-Teng Li</strong>,
-                <a href="">Justin Lin</a>,
-                <a href="">Jeffery Cheng</a>,
-                <a href="https://x.com/PedroPachuca4">Pedro Pachuca</a>
-                <br>
-                <em>ArXiv</em>, 2022
-                <br>
-                <p></p>
-                <p>
-                  <!-- First author (name ordered alphabetically) of the paper, led all experiment implementations.  -->
-                  Inspired by adversarial attack literature, we proposed ρ-explore, a simple but effective on-policy exploration method by surveying a bounded region of nearby states during early training of an agent. 
-                  Our method consistently outperforms Double DQN baseline by 49% in discrete environments on reward return [<a href="https://github.com/thekevinli/rho_exploration">code</a>]. 
-                </p>
-              </td>
-            </tr>
+      <tr>
+        <td style="padding:20px;width:25%;vertical-align:middle">
+          <div class="one; display: block; margin: auto">
+            <img src="images/tf_qare.png" width=100%>
+          </div>
+        </td>
+        <td style="padding:20px;width:75%;vertical-align:middle">
+          <a href="https://openaccess.thecvf.com/content/CVPR2026F/papers/Wei_Towards_Text-Guided_Attribute-Disentangled_Multimodal_Representation_Learning_CVPRF_2026_paper.pdf">
+            <span class="papertitle">Towards Text-Guided Attribute-Disentangled Multimodal Representation Learning</span>
+          </a>
+          <br>
+          <a href="https://yibingwei-1.github.io">Yibing Wei</a>,
+          <a href="https://sudeepkatakol.github.io/">Sudeep Katakol</a>,
+          <a href="https://x.com/MBrack_AIML">Manuel Brack</a>,
+          <a href="">Jinhong Lin</a>,
+          <a href="">Haoyue Bai</a>,
+          <strong>Yu-Teng Li</strong>,
+          <a href="https://richzhang.github.io">Richard Zhang</a>,
+          <a href="https://research.adobe.com/person/eli-shechtman/">Eli Shechtman</a>,
+          <a href="https://hareesh-ravi.github.io/">Hareesh Ravi</a>,
+          <a href="https://x.com/ajinkyakale">Ajinkya Kale</a>
+          <br>
+          <em>CVPR</em>, 2026
+          <p></p>
+          <p>
+            We formulated Queryable Attribute Representation Extraction (QARE) and introduced the first benchmark for attribute-disentangled multimodal embeddings. Proposed a training-free method that substantially outperforms SigLIP and contrastively-trained methods such as VLM2Vec, on attribute-conditioned retrieval.
+          </p>
+        </td>
+      </tr>
+      
+      <tr>
+        <td style="padding:20px;width:25%;vertical-align:middle">
+          <div class="one; display: block; margin: auto">
+            <img src="images/mllm_subject_driven.png" width=100%>
+          </div>
+        </td>
+        <td style="padding:20px;width:75%;vertical-align:middle">
+          <a href="https://arxiv.org/abs/2605.26111">
+            <span class="papertitle">Squeezing Capacity from Multimodal Large Language Models for Subject-driven Generation</span>
+          </a>
+          <br>
+          <a href="https://zsh2000.github.io/">Shuhong Zheng</a>,
+          <a href="">Aashish Kumar Misraa</a>,
+          <strong>Yu-Teng Li</strong>,
+          <a href="https://yujheli.github.io/">Yu-Jhe Li</a>,
+          <a href="https://www.gilitschenski.org/igor/">Igor Gilitschenski</a>
+          <br>
+          <em>Arxiv</em>, 2026
+          <p></p>
+          <p>
+            Conditioning diffusion models on MLLMs that jointly encode text and images better harmonizes identities in subject-driven generation and reduces copy-paste artifacts.  Introduced Dual Layer Aggregation (DLA) module to fuse multi-layer MLLM features and a multi-stage denoising strategy that balances MLLM semantics with details from VAE.
+          </p>
+        </td>
+      </tr>
+    
+      <tr>
+        <td style="padding:20px;width:25%;vertical-align:middle">
+          <div class="one; display: block; margin: auto">
+            <img src="images/halo.png" width=100%>
+          </div>
+        </td>
+        <td style="padding:20px;width:75%;vertical-align:middle">
+          <a href="https://arxiv.org/abs/2306.11180">
+            <span class="papertitle">Hyperbolic Active Learning for Semantic Segmentation under Domain Shift</span>
+          </a>
+          <br>
+          <a href="">Luca Franco*</a>,
+          <a href="">Paolo Mandica*</a>,
+          <a href="">Konstantinos Kallidromitis</a>,
+          <a href="https://www.devinguillory.com">Devin Guillory</a>,
+          <strong>Yu-Teng Li</strong>,
+          <a href="https://darrellgroup.github.io">Trevor Darrell</a>,
+          <a href="">Fabio Galasso</a>
+          <br>
+          <em>ICML</em>, 2024
+          <br>
+          <p></p>
+          <p>
+            HALO introduces a hyperbolic neural network approach to pixel-based active learning (AL) for semantic segmentation, and is the first AL method to surpass the performance of fully-supervised baseline on synthetic-to-real domain adaptation benchmarks such as GTAV → Cityscapes, with just 1% of labeled pixels.
+          </p>
+        </td>
+      </tr>
+
+      <tr>
+        <td style="padding:20px;width:25%;vertical-align:middle">
+          <div class="one; display: block; margin: auto">
+            <img src="images/lunar_lander.gif" width=100%>
+          </div>
+        </td>
+        <td style="padding:20px;width:75%;vertical-align:middle">
+          <a href="https://arxiv.org/abs/2212.10712">
+            <span class="papertitle">Neighboring State-based Exploration for Reinforcement Learning </span>
+          </a>
+          <br>
+          <strong>Yu-Teng Li</strong>,
+          <a href="">Justin Lin</a>,
+          <a href="">Jeffery Cheng</a>,
+          <a href="https://x.com/PedroPachuca4">Pedro Pachuca</a>
+          <br>
+          <em>ArXiv</em>, 2022
+          <br>
+          <p></p>
+          <p>
+            <!-- First author (name ordered alphabetically) of the paper, led all experiment implementations.  -->
+            Inspired by adversarial attack literature, we proposed ρ-explore, a simple but effective on-policy exploration method by surveying a bounded region of nearby states during early training of an agent. 
+            Our method consistently outperforms Double DQN baseline by 49% in discrete environments on reward return [<a href="https://github.com/thekevinli/rho_exploration">code</a>]. 
+          </p>
+        </td>
+      </tr>
     </tbody></table>
 
 
