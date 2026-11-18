@@ -45,7 +45,7 @@ const imgStyle = (x: M) => `aspect-ratio:${x.ratio ?? 'auto'};object-position:${
   {m && (
     <figure class={fig(m)}>
       {m.video ? (
-        <video data-gif muted loop playsinline preload="none" poster={m.src} aria-label={m.alt} style={imgStyle(m)}>
+        <video data-gif autoplay muted loop playsinline preload="metadata" poster={m.src} aria-label={m.alt} style={imgStyle(m)}>
           <source src={m.video} type="video/mp4" />
         </video>
       ) : (
@@ -58,9 +58,10 @@ const imgStyle = (x: M) => `aspect-ratio:${x.ratio ?? 'auto'};object-position:${
 <script>
   // GIF-like clips: load and play only while on screen.
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce) document.querySelectorAll('video[data-gif]').forEach((v) => { v.removeAttribute('autoplay'); (v as HTMLVideoElement).pause(); });
   const io = new IntersectionObserver((entries) => entries.forEach(({ target, isIntersecting }) => {
     const v = target as HTMLVideoElement;
-    if (isIntersecting && !reduce) v.play().catch(() => {}); else v.pause();
+    if (isIntersecting && !reduce) { v.muted = true; v.play().catch(() => {}); } else v.pause();
   }), { rootMargin: '200px' });
   document.querySelectorAll('video[data-gif]').forEach((v) => io.observe(v));
 </script>
