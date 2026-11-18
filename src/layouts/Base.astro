@@ -1,0 +1,68 @@
+---
+import '@fontsource-variable/archivo/wdth.css';
+import '@fontsource-variable/literata/opsz.css';
+import '@fontsource-variable/literata/opsz-italic.css';
+import '../styles/global.css';
+import { nav, profile, u } from '../data/site';
+
+interface Props { title?: string; description?: string; current?: string }
+const { title, description = 'Kevin Li (Yu-Teng), Senior Applied Research Scientist at Adobe Research, working on image and video foundation models for Adobe Firefly.', current } = Astro.props;
+const fullTitle = title ? `${title} · ${profile.shortName}` : profile.name;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(profile.photo, Astro.site)} />
+    <link rel="icon" href={u('/favicon.svg')} type="image/svg+xml" />
+    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+  </head>
+  <body>
+    <header class="site-head">
+      <div class="wrap">
+        <a class="brand" href={u('/')}>{profile.shortName}</a>
+        <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="site-nav"><span></span><span></span></button>
+        <nav class="site-nav" id="site-nav" aria-label="Main">
+          {nav.map((n) => <a href={n.href} aria-current={current === n.label ? 'page' : undefined}>{n.label}</a>)}
+        </nav>
+      </div>
+    </header>
+    <main class="wrap">
+      <slot />
+    </main>
+    <footer class="site-foot">
+      <div class="wrap">© 2026 Kevin Li</div>
+    </footer>
+    <script>
+      // Underline the nav link of the section in view.
+      const links = [...document.querySelectorAll<HTMLAnchorElement>('.site-nav a[href*="#"]')]
+        .map((a) => ({ a, el: document.getElementById(a.hash.slice(1)) }))
+        .filter((x): x is { a: HTMLAnchorElement; el: HTMLElement } => !!x.el);
+      let ticking = false;
+      const update = () => {
+        ticking = false;
+        const line = (document.querySelector('.site-head')?.getBoundingClientRect().bottom ?? 0) + 24;
+        const current = links.find(({ el }) => { const r = el.getBoundingClientRect(); return r.top <= line && r.bottom > line; });
+        links.forEach((x) => x.a.classList.toggle('is-active', x === current));
+      };
+      // Phone menu: two-line toggle that drops the nav down.
+      const head = document.querySelector<HTMLElement>('.site-head');
+      const toggle = document.querySelector<HTMLButtonElement>('.nav-toggle');
+      const setOpen = (open: boolean) => { head?.classList.toggle('open', open); toggle?.setAttribute('aria-expanded', String(open)); };
+      toggle?.addEventListener('click', () => setOpen(!head?.classList.contains('open')));
+      document.querySelectorAll('.site-nav a').forEach((a) => a.addEventListener('click', () => setOpen(false)));
+      addEventListener('keydown', (e) => { if (e.key === 'Escape') setOpen(false); });
+      addEventListener('click', (e) => { if (head && !head.contains(e.target as Node)) setOpen(false); });
+      if (links.length) {
+        addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+        addEventListener('resize', update);
+        update();
+      }
+    </script>
+  </body>
+</html>

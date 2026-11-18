@@ -1,0 +1,66 @@
+---
+import type { Entry } from '../data/site';
+import ClipDiagram from './ClipDiagram.astro';
+interface Props { entry: Entry }
+const { entry: e } = Astro.props;
+const m = e.media;
+type M = NonNullable<Entry['media']>;
+const fig = (x: M) => `media fit-${x.fit ?? 'contain'}`;
+const imgStyle = (x: M) => `aspect-ratio:${x.ratio ?? 'auto'};object-position:${x.position ?? 'center'}`;
+---
+<article class:list={['entry', { grouped: e.groups }]}>
+  <div class="when">{e.when}</div>
+  <div>
+    <h3>{e.href ? <a href={e.href}>{e.title}</a> : e.title}</h3>
+    {e.subtitle && <p class="sub">{e.subtitle}</p>}
+    {e.authors && <p class="authors quiet" set:html={e.authors} />}
+    {e.groups?.map((g) => (
+      <div class="ws-row">
+        <div class="ws">
+          <h4>{g.title}</h4>
+          {g.body.map((p) => <p set:html={p} />)}
+        </div>
+        {g.media && (
+          <figure class={fig(g.media)}>
+            <img src={g.media.src} alt={g.media.alt} loading="lazy" decoding="async" style={imgStyle(g.media)} />
+          </figure>
+        )}
+        {g.diagram === 'clip' && <figure class="media"><ClipDiagram /></figure>}
+      </div>
+    ))}
+    <div class:list={['body', { tail: e.groups }]}>
+      {e.body.map((p) => <p set:html={p} />)}
+      {e.bullets && <ul>{e.bullets.map((b) => <li set:html={b} />)}</ul>}
+      {e.after && <p set:html={e.after} />}
+      {e.afterList && <ul class:list={{ pts: e.groups }}>{e.afterList.map((b) => <li set:html={b} />)}</ul>}
+      {e.highlight && <p><mark set:html={e.highlight} /></p>}
+    </div>
+    {e.note && <p class="note" set:html={e.note} />}
+    {e.links && (
+      <p class="links">
+        {e.links.map((l, i) => <>{i > 0 && <span class="sep" aria-hidden="true">/</span>}<a href={l.href}>{l.label}</a></>)}
+      </p>
+    )}
+  </div>
+  {m && (
+    <figure class={fig(m)}>
+      {m.video ? (
+        <video data-gif muted loop playsinline preload="none" poster={m.src} aria-label={m.alt} style={imgStyle(m)}>
+          <source src={m.video} type="video/mp4" />
+        </video>
+      ) : (
+        <img src={m.src} alt={m.alt} loading="lazy" decoding="async" style={imgStyle(m)} />
+      )}
+    </figure>
+  )}
+</article>
+
+<script>
+  // GIF-like clips: load and play only while on screen.
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const io = new IntersectionObserver((entries) => entries.forEach(({ target, isIntersecting }) => {
+    const v = target as HTMLVideoElement;
+    if (isIntersecting && !reduce) v.play().catch(() => {}); else v.pause();
+  }), { rootMargin: '200px' });
+  document.querySelectorAll('video[data-gif]').forEach((v) => io.observe(v));
+</script>
