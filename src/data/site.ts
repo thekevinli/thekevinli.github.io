@@ -91,7 +91,7 @@ export const industry: Entry[] = [
       'Co-led multimodal pretraining and trained the production run of a model for 4MP text-to-image, instruction editing and layered generation. I designed the data curriculum and task balancing, ran caption and architecture ablations, fixed loss instabilities and drove the final recipe on 1,000+ GPUs. <a href="https://x.com/curiouskid423/status/1983229813906420009">[read more]</a>',
     ],
     note: `It also powers <a href="${PS_AUG26}">Instruct Edit with Masks</a> in Photoshop.`,
-    media: { src: u('/images/firefly5-layered-poster.webp'), video: u('/images/firefly5-layered-v2.mp4'), alt: 'Firefly Image 5 editing a photo of a noodle bowl: selecting objects as layers and editing them with prompts', fit: 'cover', ratio: '16 / 9' },
+    media: { src: u('/images/firefly5-layered-poster.webp'), video: u('/images/firefly5-layered.mp4'), alt: 'Firefly Image 5 editing a photo of a noodle bowl: selecting objects as layers and editing them with prompts', fit: 'cover', ratio: '16 / 9' },
   },
   {
     when: 'April 2025',
