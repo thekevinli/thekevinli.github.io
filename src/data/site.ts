@@ -58,7 +58,7 @@ const PS_AUG26 = 'https://blog.adobe.com/en/publish/2026/08/27/new-photoshop-inn
 export const industry: Entry[] = [
   {
     when: '2026 to present',
-    title: 'Next-generation image/video omni model',
+    title: 'Firefly next-generation image/video omni model',
     body: [],
     groups: [
       {
