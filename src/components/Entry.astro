@@ -45,9 +45,7 @@ const imgStyle = (x: M) => `aspect-ratio:${x.ratio ?? 'auto'};object-position:${
   {m && (
     <figure class={fig(m)}>
       {m.video ? (
-        <video data-gif autoplay muted loop playsinline preload="metadata" poster={m.src} aria-label={m.alt} style={imgStyle(m)}>
-          <source src={m.video} type="video/mp4" />
-        </video>
+        <video data-gif src={m.video} autoplay muted loop playsinline poster={m.src} aria-label={m.alt} style={imgStyle(m)}></video>
       ) : (
         <img src={m.src} alt={m.alt} loading="lazy" decoding="async" style={imgStyle(m)} />
       )}
@@ -56,12 +54,10 @@ const imgStyle = (x: M) => `aspect-ratio:${x.ratio ?? 'auto'};object-position:${
 </article>
 
 <script>
-  // GIF-like clips: load and play only while on screen.
+  // GIF-like clips: native muted autoplay (browsers pause it off screen); tap toggles; reduced motion stays on the poster.
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (reduce) document.querySelectorAll('video[data-gif]').forEach((v) => { v.removeAttribute('autoplay'); (v as HTMLVideoElement).pause(); });
-  const io = new IntersectionObserver((entries) => entries.forEach(({ target, isIntersecting }) => {
-    const v = target as HTMLVideoElement;
-    if (isIntersecting && !reduce) { v.muted = true; v.play().catch(() => {}); } else v.pause();
-  }), { rootMargin: '200px' });
-  document.querySelectorAll('video[data-gif]').forEach((v) => io.observe(v));
+  document.querySelectorAll<HTMLVideoElement>('video[data-gif]').forEach((v) => {
+    if (reduce) { v.removeAttribute('autoplay'); v.pause(); }
+    v.addEventListener('click', () => (v.paused ? v.play().catch(() => {}) : v.pause()));
+  });
 </script>
