@@ -1,0 +1,43 @@
+---
+import Base from '../layouts/Base.astro';
+import DenoisePortrait from '../components/DenoisePortrait.astro';
+import Entry from '../components/Entry.astro';
+import PostList from '../components/PostList.astro';
+import { profile, industry, research, researchFooter, education } from '../data/site';
+---
+<Base>
+  <section class="intro" aria-label="About">
+    <DenoisePortrait src={profile.photo} alt="Portrait of Kevin Li" caption={profile.photoCaption} />
+    <div>
+      <h1>{profile.name}</h1>
+      <p class="role">{profile.title}</p>
+      <div class="bio">{profile.bio.map((p) => <p set:html={p} />)}</div>
+      <ul class="link-row">{profile.links.map((l) => <li><a href={l.href}>{l.label}</a></li>)}</ul>
+    </div>
+  </section>
+
+  <section class="section" id="industry">
+    <h2>Industry</h2>
+    {industry.map((e) => <Entry entry={e} />)}
+  </section>
+
+  <section class="section" id="research">
+    <h2>Research</h2>
+    {research.map((e) => <Entry entry={e} />)}
+    <div class="section-foot">
+      <span>* Equal contribution</span>
+      <a href={researchFooter.scholar}>All papers on Google Scholar</a>
+    </div>
+    <p>{researchFooter.reviewer}</p>
+  </section>
+
+  <section class="section" id="blogs">
+    <h2>Blogs</h2>
+    <PostList />
+  </section>
+
+  <section class="section" id="berkeley">
+    <h2>Berkeley</h2>
+    {education.map((e) => <Entry entry={e} />)}
+  </section>
+</Base>

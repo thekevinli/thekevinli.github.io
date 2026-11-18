@@ -1,0 +1,30 @@
+---
+import { getCollection } from 'astro:content';
+import { blogList } from '../data/site';
+// Link only posts that exist and are published (drafts link in dev only).
+const posts = await getCollection('blogs', (p) => import.meta.env.DEV || !p.data.draft);
+const live = new Set(posts.map((p) => p.id));
+---
+<details class="wip">
+  <summary>
+    <span class="wip-deck" aria-hidden="true">
+      {blogList.map((b, i) => <img src={b.cover} alt="" width="64" height="40" style={`--i:${i};--d:${i - 2};--a:${Math.abs(i - 2)}`} />)}
+    </span>
+    <span class="wip-text"><span class="wip-lead">This section is under construction.</span> <span class="wip-cta"><span class="show">Click to see what’s planned.</span><span class="hide">Hide the plan.</span></span></span>
+    <svg class="wip-chev" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg>
+  </summary>
+  <ul class="post-list">
+    {blogList.map((b) => {
+      const href = b.slug && live.has(b.slug) ? `${import.meta.env.BASE_URL.replace(/\/$/, '')}/blogs/${b.slug}/` : undefined;
+      return (
+        <li>
+          <img class="cover" src={b.cover} alt="" width="160" height="100" loading="lazy" />
+          <div>
+            {href ? <a class="t" href={href}>{b.title}</a> : <span class="t">{b.title}</span>}
+            <p class="d">{b.description}</p>
+          </div>
+        </li>
+      );
+    })}
+  </ul>
+</details>
