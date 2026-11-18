@@ -177,7 +177,7 @@ export const researchFooter = {
 export const education: Entry[] = [
   {
     when: 'Spring 2023',
-    title: 'CS 182/282A Deep Neural Networks, UC Berkeley',
+    title: 'CS 182/282A Deep Neural Networks',
     href: 'https://inst.eecs.berkeley.edu/~cs182/sp23/',
     subtitle: 'Head Teaching Assistant of Discussions',
     body: [
