@@ -123,7 +123,7 @@ a:focus-visible { outline: 2px solid var(--signal); outline-offset: 2px; border-
 .ws h4 { margin: 0; font-family: var(--display); font-size: 17px; font-weight: 600; font-stretch: 105%; line-height: 1.3; }
 .ws h4 + p { margin-top: 16px; }
 .ws p { margin-top: 10px; font-size: 16.5px; line-height: 1.6; max-width: 62ch; }
-.entry .body.tail { margin-top: 32px; }
+.entry .body.tail { margin-top: 32px; font-size: 15px; color: var(--graphite); } /* same quiet voice as .note */
 .pts { list-style: none; padding: 0 !important; }
 .pts > li { position: relative; padding-left: 22px; }
 .pts > li::before { content: ""; position: absolute; left: 0; top: .8em; width: 10px; height: 1.5px; background: var(--graphite); }
