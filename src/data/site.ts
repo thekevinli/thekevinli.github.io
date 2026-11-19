@@ -108,9 +108,17 @@ export const industry: Entry[] = [
     title: 'Firefly Image 3 Custom Models',
     href: 'https://helpx.adobe.com/firefly/web/work-with-enterprise-features/train-custom-models/custom-models-overview.html',
     body: [
-      'Led personalization end to end, from the training recipe to the production fine-tuning pipeline behind Custom Models for enterprise customers. Before that, I built a training-free style transfer, inversion with weighted cross-attention, to synthesize paired editing data. <a href="https://helpx.adobe.com/firefly/web/work-with-enterprise-features/train-custom-models/custom-models-overview.html">[read more]</a>',
+      'Led personalization effort from training recipe to the production finetuning pipeline integration. Compared to the previous generation, we delivered a more stable recipe with VLM-predicted superclass, better memory efficiency, and enabling new features like ControlNet. <a href="https://helpx.adobe.com/firefly/web/work-with-enterprise-features/train-custom-models/custom-models-overview.html">[read more]</a>',
     ],
-    media: { src: u('/images/firefly3.webp'), alt: 'The Firefly Custom Models library', fit: 'cover', position: 'top left', ratio: '16 / 10' },
+    media: { src: u('/images/firefly3-custom.webp'), alt: 'A Custom Models example from Firefly Image 3: a red furry monster holding a light bulb, generated from four reference images', fit: 'cover', ratio: '16 / 10' },
+  },
+  {
+    when: 'November 2023',
+    title: 'Firefly Image 2 Style Transfer',
+    body: [
+      'Developed a patented training-free style transfer algorithm by scaling cross-attention products in U-Net blocks with a predefined schedule, along with DDIM inversion of the content reference image. It became a cheap, reliable method to curate paired stylization data for our early instruction-editing model and part of an <a href="https://patents.google.com/patent/US20260105661A1/en">Adobe patent</a>.',
+    ],
+    media: { src: u('/images/style-transfer-poster.webp'), video: u('/images/style-transfer.mp4'), alt: 'Style transfer: a content image is DDIM-inverted partway to noise, then regenerated in the look of a style reference image', fit: 'cover', ratio: '16 / 10' },
   },
 ];
 
