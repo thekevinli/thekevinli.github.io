@@ -98,7 +98,7 @@ export const industry: Entry[] = [
     title: 'Firefly Image 4',
     href: 'https://blog.adobe.com/en/publish/2025/04/24/adobe-firefly-next-evolution-creative-ai-is-here',
     body: [
-      'Led aesthetic fine-tuning; the recipe was demoed at Adobe MAX. <br>In pretraining, I added a timestep curriculum that routes synthetic data to high-noise steps, widening concept coverage without inheriting over-saturation. <a href="https://blog.adobe.com/en/publish/2025/04/24/adobe-firefly-next-evolution-creative-ai-is-here">[read more]</a>',
+      'Led aesthetic fine-tuning, demoed at Adobe MAX. I curated the first SFT set that clearly improved photorealism; that set and most of the recipe are still in use, and it remains the most reliable image SFT data in house. The recipe spans data selection for “diverse content, consistent style”, a data mixture with prior preservation, model souping and hyperparameter tuning. <br>In pretraining, I added a timestep curriculum that routes synthetic data to high-noise steps, widening concept coverage without inheriting the over-saturation and lack of detail of synthetic images. <a href="https://blog.adobe.com/en/publish/2025/04/24/adobe-firefly-next-evolution-creative-ai-is-here">[read more]</a>',
     ],
     media: { src: u('/images/firefly4-max.webp'), alt: 'Firefly Image 4 generations on stage at the Adobe MAX launch: a freckled portrait, a chameleon, and a portrait with flowers in her hair', fit: 'cover', ratio: '16 / 10' },
   },
