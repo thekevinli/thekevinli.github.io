@@ -127,8 +127,8 @@ a:focus-visible { outline: 2px solid var(--signal); outline-offset: 2px; border-
 .pts { list-style: none; padding: 0 !important; }
 .pts > li { position: relative; padding-left: 22px; }
 .pts > li::before { content: ""; position: absolute; left: 0; top: .8em; width: 10px; height: 1.5px; background: var(--graphite); }
-.media img, .media video { display: block; width: 100%; height: auto; border-radius: 4px; background: var(--plate); }
-.media video { object-fit: cover; }
+.media picture { display: block; }
+.media img { display: block; width: 100%; height: auto; border-radius: 4px; background: var(--plate); }
 .media.fit-cover img { object-fit: cover; }
 .media.fit-contain img { object-fit: contain; }
 

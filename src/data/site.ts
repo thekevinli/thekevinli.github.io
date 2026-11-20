@@ -32,8 +32,8 @@ export const nav = [
   { label: 'Berkeley', href: u('/#berkeley') },
 ];
 
-// video: a muted looping clip that plays like a GIF; src is its poster frame.
-type Media = { src: string; alt: string; fit?: 'cover' | 'contain'; position?: string; ratio?: string; video?: string };
+// still: a static frame shown instead of an animated src when reduced motion is on.
+type Media = { src: string; alt: string; fit?: 'cover' | 'contain'; position?: string; ratio?: string; still?: string };
 
 export type Entry = {
   when: string;
@@ -91,15 +91,15 @@ export const industry: Entry[] = [
       'Co-led multimodal pretraining and trained the production run of a model for 4MP text-to-image, instruction editing and layered generation. I designed the data curriculum and task balancing, ran caption and architecture ablations, fixed loss instabilities and drove the final recipe on 1,000+ GPUs. <a href="https://x.com/curiouskid423/status/1983229813906420009">[read more]</a>',
     ],
     note: `It also powers <a href="${PS_AUG26}">Instruct Edit with Masks</a> in Photoshop.`,
-    media: { src: u('/images/firefly5-layered-poster.webp'), video: u('/images/firefly5-layered.mp4'), alt: 'Firefly Image 5 editing a photo of a noodle bowl: selecting objects as layers and editing them with prompts', fit: 'cover', ratio: '16 / 9' },
+    media: { src: u('/images/firefly5-layered.webp'), still: u('/images/firefly5-layered-poster.webp'), alt: 'Firefly Image 5 editing a photo of a noodle bowl: selecting objects as layers and editing them with prompts', fit: 'cover', ratio: '16 / 9' },
   },
   {
     when: 'April 2025',
     title: 'Firefly Image 4',
     href: 'https://blog.adobe.com/en/publish/2025/04/24/adobe-firefly-next-evolution-creative-ai-is-here',
     body: [
-      'Led the aesthetic finetuning recipe that was demoed at Adobe MAX. We delivered the first in-house SFT dataset that significantly improved photorealism, data mixture and hyperparameter recipe, as well as exploration of model souping.',
-      'In pretraining, I added a timestep curriculum that routes synthetic data to high-noise steps, widening concept coverage without inheriting the over-saturation and lack of detail of synthetic images. <a href="https://blog.adobe.com/en/publish/2025/04/24/adobe-firefly-next-evolution-creative-ai-is-here">[read more]</a>',
+      'Led the aesthetic finetuning effort that was demoed at Adobe MAX. We delivered the first in-house SFT dataset that significantly improved photorealism, data mixture and hyperparameter recipe, as well as exploration of model souping.',
+      'In pretraining, I developed a curriculum learning method by diffusion timestep routing, which enables model to train on synthetic data without inheriting its lack of details and over-saturated looks. <a href="https://blog.adobe.com/en/publish/2025/04/24/adobe-firefly-next-evolution-creative-ai-is-here">[read more]</a>',
     ],
     media: { src: u('/images/firefly4-max.webp'), alt: 'Firefly Image 4 generations on stage at the Adobe MAX launch: a freckled portrait, a chameleon, and a portrait with flowers in her hair', fit: 'cover', ratio: '16 / 10' },
   },
@@ -118,7 +118,7 @@ export const industry: Entry[] = [
     body: [
       'Developed a patented training-free style transfer algorithm by scaling cross-attention products in U-Net blocks with a predefined schedule, along with DDIM inversion of the content reference image. It became a cheap, reliable method to curate paired stylization data for our early instruction-editing model and part of an <a href="https://patents.google.com/patent/US20260105661A1/en">Adobe patent</a>.',
     ],
-    media: { src: u('/images/style-transfer-poster.webp'), video: u('/images/style-transfer.mp4'), alt: 'Style transfer: a content image is DDIM-inverted partway to noise, then regenerated in the look of a style reference image', fit: 'cover', ratio: '16 / 10' },
+    media: { src: u('/images/style-transfer.webp'), still: u('/images/style-transfer-poster.webp'), alt: 'Style transfer: a content image is DDIM-inverted partway to noise, then regenerated in the look of a style reference image', fit: 'cover', ratio: '16 / 10' },
   },
 ];
 
