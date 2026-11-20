@@ -46,6 +46,7 @@ const imgStyle = (x: M) => `aspect-ratio:${x.ratio ?? 'auto'};object-position:${
     <figure class={fig(m)}>
       <picture>
         {m.still && <source srcset={m.still} media="(prefers-reduced-motion: reduce)" />}
+        {m.mp4 && <source srcset={m.mp4} type="video/mp4" />}
         <img src={m.src} alt={m.alt} loading="lazy" decoding="async" style={imgStyle(m)} />
       </picture>
     </figure>

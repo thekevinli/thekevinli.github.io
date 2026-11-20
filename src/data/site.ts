@@ -32,8 +32,8 @@ export const nav = [
   { label: 'Berkeley', href: u('/#berkeley') },
 ];
 
-// still: a static frame shown instead of an animated src when reduced motion is on.
-type Media = { src: string; alt: string; fit?: 'cover' | 'contain'; position?: string; ratio?: string; still?: string };
+// still: static frame for reduced motion. mp4: same clip for Safari's <img>, which plays animated WebP slowly.
+type Media = { src: string; alt: string; fit?: 'cover' | 'contain'; position?: string; ratio?: string; still?: string; mp4?: string };
 
 export type Entry = {
   when: string;
@@ -91,7 +91,7 @@ export const industry: Entry[] = [
       'Co-led multimodal pretraining and trained the production run of a model for 4MP text-to-image, instruction editing and layered generation. I designed the data curriculum and task balancing, ran caption and architecture ablations, fixed loss instabilities and drove the final recipe on 1,000+ GPUs. <a href="https://x.com/curiouskid423/status/1983229813906420009">[read more]</a>',
     ],
     note: `It also powers <a href="${PS_AUG26}">Instruct Edit with Masks</a> in Photoshop.`,
-    media: { src: u('/images/firefly5-layered.webp'), still: u('/images/firefly5-layered-poster.webp'), alt: 'Firefly Image 5 editing a photo of a noodle bowl: selecting objects as layers and editing them with prompts', fit: 'cover', ratio: '16 / 9' },
+    media: { src: u('/images/firefly5-layered.webp'), still: u('/images/firefly5-layered-poster.webp'), mp4: u('/images/firefly5-layered.mp4'), alt: 'Firefly Image 5 editing a photo of a noodle bowl: selecting objects as layers and editing them with prompts', fit: 'cover', ratio: '16 / 9' },
   },
   {
     when: 'April 2025',
@@ -118,7 +118,7 @@ export const industry: Entry[] = [
     body: [
       'Developed a patented training-free style transfer algorithm by scaling cross-attention products in U-Net blocks with a predefined schedule, along with DDIM inversion of the content reference image. It became a cheap, reliable method to curate paired stylization data for our early instruction-editing model and part of an <a href="https://patents.google.com/patent/US20260105661A1/en">Adobe patent</a>.',
     ],
-    media: { src: u('/images/style-transfer.webp'), still: u('/images/style-transfer-poster.webp'), alt: 'Style transfer: a content image is DDIM-inverted partway to noise, then regenerated in the look of a style reference image', fit: 'cover', ratio: '16 / 10' },
+    media: { src: u('/images/style-transfer.webp'), still: u('/images/style-transfer-poster.webp'), mp4: u('/images/style-transfer.mp4'), alt: 'Style transfer: a content image is DDIM-inverted partway to noise, then regenerated in the look of a style reference image', fit: 'cover', ratio: '16 / 10' },
   },
 ];
 
